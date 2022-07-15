@@ -18,8 +18,6 @@ export default function GithubButton(props){
     // eslint-disable-next-line react-hooks/exhaustive-deps
     } ,[])
     
-    console.log(props.mini)
-
     return (
         <div className={[css.div__component_wrap, (props.mini && css.mini)].join(" ")}>
             <a href={`https://github.com/${props.username}/`} rel="noreferrer" target="_blank" className={css.button}>{!props.mini && props.value}</a>

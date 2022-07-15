@@ -9,9 +9,10 @@
 > - `value`  The text shown on the button
 > - `username`  Your github username
 > - `bubble`  Boolean for the bubble with your public repos
+> - `mini`  Toggle smaller version of the button (no text, rounded)
 
 ## Example
 
 ```jsx
-<GithubButton value="Visit my github" username="PortiESP" bubble />
+<GithubButton value="Visit my github" username="PortiESP" bubble mini/>
 ```

@@ -15,12 +15,13 @@ export default function GithubButton(props){
         
         fetchData()
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     } ,[])
     
 
     return (
         <div className={css.div__component_wrap}>
-            <a href={`https://github.com/${props.username}/`} rel="noreferrer" target="_blank" className={css.button}>{props.value}</a>
+            <a href={`https://github.com/${props.username}/`} rel="noreferrer" target="_blank" className={[css.button, css.mini].join(" ")}>{!props.mini && props.value}</a>
             {props.bubble ? <div className={css.bubble}><span>{numRepos}</span></div> : ""}
         </div>
     )

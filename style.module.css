@@ -39,10 +39,11 @@
 
 .bubble{
     --size: 30px;
+    --diagonalPos: -4px;
 
     position: absolute;
-    top: -5px;
-    right: -5px;
+    top: var(--diagonalPos);
+    right: var(--diagonalPos);
     width: var(--size);
     height: var(--size);
     text-align: center;
@@ -51,4 +52,28 @@
 
     background-color: red;
     border-radius: 50%;
+}
+
+
+.div__component_wrap{
+    padding: 0;
+    border-radius: 50%;
+}
+a.mini{
+    display: inline-block;
+    /* width: 30px; */
+    padding: 10px;
+    
+}
+a.mini::before{
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: none;
+}
+
+a.mini ~ .bubble{
+    --size: 25px;
+    /* width: var(--size); */
 }

@@ -39,8 +39,8 @@
 
 .bubble{
     --size: 30px;
-    --diagonalPos: -4px;
-
+    --diagonalPos: -5px;
+    
     position: absolute;
     top: var(--diagonalPos);
     right: var(--diagonalPos);
@@ -49,23 +49,23 @@
     text-align: center;
     line-height: calc(var(--size) + 1px);
     font-size: .9rem;
-
+    
     background-color: red;
     border-radius: 50%;
 }
 
 
-.div__component_wrap{
+.div__component_wrap.mini{
     padding: 0;
     border-radius: 50%;
 }
-a.mini{
+.div__component_wrap.mini a{
     display: inline-block;
     /* width: 30px; */
     padding: 10px;
     
 }
-a.mini::before{
+.div__component_wrap.mini a::before{
     position: static;
     display: flex;
     justify-content: center;
@@ -73,7 +73,7 @@ a.mini::before{
     transform: none;
 }
 
-a.mini ~ .bubble{
+.div__component_wrap.mini a ~ .bubble{
     --size: 25px;
-    /* width: var(--size); */
+    --diagonalPos: -4px
 }

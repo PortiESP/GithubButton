@@ -1,5 +1,6 @@
 import React from "react"
 import css from "./style.module.css"
+import imageGithub from "./github_icon.png" 
 
 export default function GithubButton(props){
 

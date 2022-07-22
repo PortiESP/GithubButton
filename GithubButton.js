@@ -1,4 +1,5 @@
 import React from "react"
+import Image from "next/image"
 import css from "./style.module.css"
 import imageGithub from "./github_icon.png" 
 
@@ -20,9 +21,19 @@ export default function GithubButton(props){
     } ,[])
     
     return (
-        <div className={[css.div__component_wrap, (props.mini && css.mini)].join(" ")}>
-            <a href={`https://github.com/${props.username}/`} rel="noreferrer" target="_blank" className={css.button}>{!props.mini && props.value}</a>
-            {props.bubble ? <div className={css.bubble}><span>{numRepos}</span></div> : ""}
-        </div>
+        <>  
+            
+            <div className={[css.div__component_wrap, (props.mini && css.mini)].join(" ")}>
+                <a href={`https://github.com/${props.username}/`} rel="noreferrer" target="_blank" className={css.button}>
+                    <div className={css.div__imageCont}>
+                        <Image src={imageGithub} alt="Logo github" layout="fill" objectFit="cover"/>
+                    </div>
+                    <span>
+                        {!props.mini && props.value}
+                    </span>
+                </a>
+                {props.bubble ? <div className={css.bubble}><span>{numRepos}</span></div> : ""}
+            </div>
+        </>
     )
 }

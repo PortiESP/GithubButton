@@ -4,13 +4,12 @@
 .div__component_wrap{
     position: relative;
     display: inline-block;
-    padding: 15px 30px 15px 60px;
     background-color: black;
     box-shadow: 0 0 10px 0 black;
     border-radius: 20px;
     color: #FBFBFB;
     text-decoration: none;
-
+    
     font-family: 'Poppins', sans-serif;
 }
 
@@ -19,27 +18,26 @@
 }
 
 .button{
+    display: flex;
+    align-items: center;
+
+    padding: 12px 18px;
     text-decoration: none;
     color: inherit;
 }
 
-.button:before{
-    content: "";
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: inline-block;
-    
-    background-image: url("./github_icon.png");
-    background-size: cover;
+.div__imageCont{
+    position: relative;
+    padding: 5px;
     width: 30px;
     height: 30px;
+    margin-right: 10px;
+    top:-1px;
 }
 
 .bubble{
     --size: 30px;
-    --diagonalPos: -5px;
+    --diagonalPos: -8px;
     
     position: absolute;
     top: var(--diagonalPos);

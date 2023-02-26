@@ -28,7 +28,7 @@ export default function GithubButton(props){
             <div className={[css.div__component_wrap, (props.mini && css.mini)].join(" ")}>
                 <a href={`https://github.com/${props.username}/`} rel="noreferrer" target="_blank" className={css.button}>
                     <div className={css.div__imageCont}>
-                        <Image src={imageGithub} alt="Logo github" layout="fill" objectFit="cover"/>
+                        <Image src={imageGithub} alt="Logo github" fill />
                     </div>
                     <span>
                         {!props.mini && props.value}
